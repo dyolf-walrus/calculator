@@ -1,0 +1,61 @@
+* {
+    color: #242424;
+}
+
+button {
+    width: 100px;
+    height: 115px;
+    font-size: 30px;
+    font-weight: 900;
+    border-radius: 8px;
+    border: 3px solid #242424;
+}
+
+.container {
+    width: 500px;
+    background-color: #242424;
+    padding: 10px;
+    margin: auto;
+}
+
+.display {
+    width: 100%;
+    height: 75px;
+    background-color: #cfcfcf;
+    border: 1px solid #444444;
+    font-size: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.input {
+    width: 100%;
+    display: flex;
+    margin-top: 10px;
+}
+
+.lilguys {
+    display: flex;
+    flex-direction: column;
+}
+
+.zero {
+    width: 300px;
+}
+
+.equals {
+    height: 230px;
+}
+
+.clear {
+    height: 230px;
+}
+
+.numbers {
+    width: 450px;
+    display: flex;
+    flex-wrap: wrap;
+}

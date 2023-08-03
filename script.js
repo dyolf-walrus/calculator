@@ -17,17 +17,31 @@ function divide(a, b) {
 let num1;
 let num2;
 let operator;
+let displayValue = "";
 
 function operate(a, b, c) {
-    if (c == '+') {
+    if (c == 'plus') {
         return add(a, b);
-    } else if (c == '-') {
+    } else if (c == 'minus') {
         return subtract(a, b);
-    } else if (c == '*') {
+    } else if (c == 'times') {
         return multiply(a, b);
-    } else if (c == '/') {
+    } else if (c == 'divide') {
         return divide(a, b);
     }
 }
 
-console.log(operate(10, 5, '/'))
+let display = document.getElementById("display")
+display.textContent = displayValue;
+
+const numInput = document.getElementsByClassName("number");
+
+//to add numerical values to displayValue when 'number' buttons are clicked
+for (i = 0; i < numInput.length; i++) {
+    let num = numInput[i];
+    numInput[i].addEventListener('click', function() {
+        console.log(num.dataset.value);
+        displayValue = displayValue + num.dataset.value;
+        display.textContent = displayValue;
+    })
+}

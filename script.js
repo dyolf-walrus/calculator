@@ -46,6 +46,9 @@ for (i = 0; i < numInput.length; i++) {
         displayValue = "";
     }
     numInput[i].addEventListener('click', function() {
+        if (num1 && !operator) {
+            displayValue = "";
+        }
         displayValue = displayValue + num.dataset.value;
         display.textContent = displayValue;
     })
@@ -93,6 +96,7 @@ function equaling() {
         displayValue = operate(num1, num2, operator)
         display.textContent = displayValue;
         operator = undefined;
+        num1 = displayValue;
     }
 }
 

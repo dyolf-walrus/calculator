@@ -46,7 +46,6 @@ for (i = 0; i < numInput.length; i++) {
         displayValue = "";
     }
     numInput[i].addEventListener('click', function() {
-        console.log(num.dataset.value);
         displayValue = displayValue + num.dataset.value;
         display.textContent = displayValue;
     })
@@ -56,13 +55,17 @@ for (i = 0; i < numInput.length; i++) {
 for (i = 0; i < opInput.length; i++) {
     let op = opInput[i];
     opInput[i].addEventListener('click', function() {
-        if (!operator) {
+        if (displayValue[displayValue.length - 1] == " ") {
+            return;
+        }
+        else if (!operator) {
             operator = op.dataset.value;
             displayValue = displayValue + " " + op.dataset.value + " ";
             display.textContent = displayValue;
         }
         else if (operator) {
             equaling();
+            console.log(operator)
             operator = op.dataset.value;
             displayValue = displayValue + " " + op.dataset.value + " ";
             display.textContent = displayValue;
@@ -86,7 +89,7 @@ equals.addEventListener('click', function() {
 
 function equaling() {
     splitDisplay(displayValue);
-    if (num1 && num2 && operator) {
+    if ((num1 || num1 == 0) && (num2 || num2 == 0) && operator) {
         displayValue = operate(num1, num2, operator)
         display.textContent = displayValue;
         operator = undefined;

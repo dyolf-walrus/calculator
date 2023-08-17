@@ -58,7 +58,7 @@ for (i = 0; i < numInput.length; i++) {
 for (i = 0; i < opInput.length; i++) {
     let op = opInput[i];
     opInput[i].addEventListener('click', function() {
-        if (displayValue[displayValue.length - 1] == " ") {
+        if (displayValue[displayValue.length - 1] == " " || displayValue === "") {
             return;
         }
         else if (!operator) {
@@ -68,7 +68,6 @@ for (i = 0; i < opInput.length; i++) {
         }
         else if (operator) {
             equaling();
-            console.log(operator)
             operator = op.dataset.value;
             displayValue = displayValue + " " + op.dataset.value + " ";
             display.textContent = displayValue;
@@ -105,4 +104,17 @@ function splitDisplay(string) {
     num1 = parseFloat(arr[0]);
     num2 = parseFloat(arr[2]);
     operator = arr[1];
+}
+
+//adding sound effects
+
+const buttons = document.getElementsByTagName('button')
+let audioArray = ['audio/catmeow1.wav', 'audio/catmeow2.mp3', 'audio/catmeow3.wav', 'audio/catmeow5.wav', 'audio/catmeow6.m4a', 'audio/catmeow7.wav', 'audio/catmeow8.wav', 'audio/catmeow9.ogg']
+
+for (i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener('click', function() {
+        let ranNum = Math.floor(Math.random() * 8)
+        let sound = new Audio(audioArray[ranNum]);
+        sound.play();
+    })
 }

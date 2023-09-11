@@ -50,10 +50,14 @@ button {
 
 #equals {
     height: 230px;
+    background-image: url("images/catvertical1.png");
+    background-position: bottom;
 }
 
 #clear {
     height: 230px;
+    background-image: url("images/catvertical2.png");
+    background-position: center;
 }
 
 .numbers {
@@ -61,3 +65,80 @@ button {
     display: flex;
     flex-wrap: wrap;
 }
+
+#cat1 {
+    background-image: url("images/cat1.png");
+    background-position: 50% 50%;
+}
+
+#cat2 {
+    background-image: url("images/cat2.png");
+    background-position: center;
+}
+
+#cat3 {
+    background-image: url("images/cat3.png");
+    background-position: center;
+}
+
+#cat4 {
+    background-image: url("images/cat4.png");
+    background-position: 70% 50%;
+}
+
+#cat5 {
+    background-image: url("images/cat5.png");
+    background-position: center;
+}
+
+#cat6 {
+    background-image: url("images/cat6.png");
+    background-position: center;
+    background-size: 125px;
+}
+
+#cat7 {
+    background-image: url("images/cat7.png");
+    background-position: 50% 30%;
+    background-size: 125px;
+}
+
+#cat8 {
+    background-image: url("images/cat8.png");
+    background-position: center;
+}
+
+#cat9 {
+    background-image: url("images/cat9.png");
+    background-position: 30% 30%;
+    background-size: 125px;
+}
+
+#cat10 {
+    background-image: url("images/cat10.png");
+    background-position: 30% 30%;
+    background-size: 125px;
+}
+
+#cat11 {
+    background-image: url("images/cat11.png");
+    background-position: center;
+}
+
+#cat12 {
+    background-image: url("images/cat12.png");
+    background-position: center;
+}
+
+#cat13 {
+    background-image: url("images/cat13.png");
+    background-position: 30% 30%;
+    background-size: 125px;
+}
+
+#cathorizontal {
+    background-image: url("images/cathorizontal.png");
+    background-position: center;
+    background-size: 300px;
+}
+

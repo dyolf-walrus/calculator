@@ -18,6 +18,7 @@ let num1;
 let num2;
 let operator;
 let displayValue = "";
+let didYouEqual = false;
 
 function operate(a, b, c) {
     if (c == '+') {
@@ -46,8 +47,10 @@ for (i = 0; i < numInput.length; i++) {
         displayValue = "";
     }
     numInput[i].addEventListener('click', function() {
-        if (num1 && !operator) {
+        if (num1 && !operator && didYouEqual) {
             displayValue = "";
+            console.log('im the problem')
+            didYouEqual = false;
         }
         displayValue = displayValue + num.dataset.value;
         display.textContent = displayValue;
@@ -96,6 +99,7 @@ function equaling() {
         display.textContent = displayValue;
         operator = undefined;
         num1 = displayValue;
+        didYouEqual = true;
     }
 }
 
